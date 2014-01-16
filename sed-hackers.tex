@@ -19,6 +19,16 @@
 \useoutertheme{infolines}
 \setbeamercovered{dynamic}
 
+% A Nice Title Page for Beamer Presentations
+% http://github.com/dfalster/BeamerTitleSlide
+\usepackage{tikz}
+\usepackage[framemethod=tikz]{mdframed}
+
+% Define a new mdframed environment
+\newmdenv[tikzsetting={draw=black,fill=white,fill opacity=0.8},
+  backgroundcolor=none,leftmargin=0,rightmargin=0, innertopmargin=4pt,
+  skipbelow=\baselineskip, skipabove=\baselineskip]{TitleBox}
+
 \lstset{basicstyle=\ttfamily,language=python}
 
 \newcommand{\ShowCurrentSection}[0]{
@@ -43,13 +53,17 @@
 
 \begin{document}
 
-\begin{frame}
-    \titlepage
-    \begin{figure}
-      \includegraphics[width=7cm]{pics/ninja.jpg}
-      \vspace{-5cm}
-  \end{figure}
+{
+\usebackgroundtemplate{\includegraphics[height=1.0\paperheight]{pics/ninjas.jpg}}
+
+\begin{frame}[plain]
+  \vspace{6.25cm}
+  \begin{TitleBox}
+    {\LARGE \inserttitle} \\
+    {\small \insertauthor \enspace --- \thinspace \url{http://github.com/vterron}}
+  \end{TitleBox}
 \end{frame}
+}
 
 \section{Introducción}
 \begin{frame}{}
