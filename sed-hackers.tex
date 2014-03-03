@@ -438,6 +438,35 @@
 
 \end{frame}
 
+\begin{frame}{rsync}
+
+  \begin{itemize} \itemsep0em
+    \item Herramienta \structure{fundamental} para la sincronización
+      de directorios
+    \item Hace copias en local o remotas (vía \structure{SSH})
+    \item Transfiere sólo los archivos que se han \structure{modificado}
+    \item Y de éstos sólo las partes diferentes
+      (\structure{compresión delta})
+    \item Usa \structure{checksum} para verificar que las copias son
+      \structure{idénticas}
+  \end{itemize}
+
+  \begin{alertblock}{\centering \footnotesize Escenarios habituales}
+    \begin{itemize} \itemsep0em
+      \footnotesize
+      \item Uso básico: para copias de seguridad
+      \item Uso avanzado: periódicas, usando \structure{cron}
+      \item Uso \structure{hacker}: periódicas e incrementales
+    \end{itemize}
+  \end{alertblock}
+
+  \begin{block}{}
+    \centering \small
+    El \structure{Time Machine} de Apple es rsync con interfaz gráfica
+  \end{block}
+
+\end{frame}
+
 \begin{frame}{Dos casos}
 
   \begin{exampleblock}{Escenario A}\centering
