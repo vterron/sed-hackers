@@ -1,4 +1,4 @@
-The slides, in Spanish, of the talk I gave to first-year Computer Science students at the `ETSIIT <http://etsiit.ugr.es/>`_ (Granada, Spain) in May 2013.
+The slides, in Spanish, of the talk I gave to first-year Computer Science students at the `ETSIIT <http://etsiit.ugr.es/>`_ (Granada, Spain) in May 2013 and March 2014.
 
 .. image:: ./pics/title-page-screenshot.jpg
 
