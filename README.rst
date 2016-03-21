@@ -1,13 +1,17 @@
-The slides, in Spanish, of the talk I gave to first-year Computer Science students at the `ETSIIT <http://etsiit.ugr.es/>`_ (Granada, Spain) in May 2013, March 2014 and June 2015. Also at the `University of Alicante <http://www.ua.es/>`_ in February 2016.
+The slides, in Spanish, of my talk to first-year Computer Science students.
 
-|PDF|_
+|Front|_
 
-They are also `available as a PDF`__, always up-to-date (via git hooks).
+They are also `available as a PDF`_, always up-to-date (via git hooks).
 
 * Title: *Be Hackers!*
 * Language: Spanish
-* License: `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_
+* License: `CC BY-SA 4.0`_
 
-.. |PDF| image:: ./pics/title-page-screenshot.jpg
-.. _PDF: http://www.iaa.es/~vterron/sed-hackers.pdf
-__ PDF_
+More information is available on the `GitHub page of the talk`_.
+
+.. _GitHub page of the talk: http://vterron.github.io/sed-hackers/
+.. |Front| image:: ./pics/title-page-screenshot.jpg
+.. _Front: `GitHub page of the talk`_
+.. _available as a PDF: http://www.iaa.es/~vterron/sed-hackers.pdf
+.. _CC BY-SA 4.0: http://creativecommons.org/licenses/by-sa/4.0/
