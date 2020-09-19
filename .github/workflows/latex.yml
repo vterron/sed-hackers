@@ -8,8 +8,14 @@ jobs:
     steps:
       - name: Git repository checkout
         uses: actions/checkout@v2
-        
+
       - name: LaTeX compilation
         uses: dante-ev/latex-action@master
         with:
           root_file: sed-hackers.tex
+
+      - name: Archive PDF latex
+        uses: actions/upload-artifact@v2
+        with:
+          name: slides-pdf
+          path: sed-hackers.pdf
