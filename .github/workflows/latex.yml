@@ -1,0 +1,15 @@
+name: Compile Beamer slides to PDF
+
+on: [push]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git repository checkout
+        uses: actions/checkout@v2
+        
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: sed-hackers.tex
