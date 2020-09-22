@@ -2,7 +2,7 @@ The slides, in Spanish, of my talk to first-year Computer Science students.
 
 [![Front](./pics/title-page-screenshot.jpg)][pdf]
 
-They are also [available as a PDF][pdf], always up-to-date (via git hooks).
+They are also [available as a PDF][pdf], always up-to-date via [a GitHub action](.github/workflows/latex.yml).
 
 -   Title: *Be Hackers!*
 -   Language: Spanish
