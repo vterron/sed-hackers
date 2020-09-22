@@ -2,12 +2,22 @@ name: Compile Beamer slides to PDF
 
 on: [push]
 
+env:
+  GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Git repository checkout
         uses: actions/checkout@v2
+
+      - name: Setup Cloud SDK
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GCS_SA_KEY }}
+          project_id: ${{ secrets.GCS_PROJECT }}
+          export_default_credentials: true
 
       - name: LaTeX compilation
         uses: dante-ev/latex-action@master
@@ -19,3 +29,7 @@ jobs:
         with:
           name: slides-pdf
           path: sed-hackers.pdf
+
+      - name: Upload PDF slides to Google Cloud Storage
+        run: |-
+          gsutil cp sed-hackers.pdf gs://$GCS_BUCKET
