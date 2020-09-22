@@ -33,3 +33,4 @@ jobs:
       - name: Upload PDF slides to Google Cloud Storage
         run: |-
           gsutil cp sed-hackers.pdf gs://$GCS_BUCKET
+          gsutil acl ch -u AllUsers:R gs://$GCS_BUCKET/sed-hackers.pdf
