@@ -24,7 +24,7 @@ jobs:
         with:
           root_file: sed-hackers.tex
 
-      - name: Archive PDF latex
+      - name: Archive PDF slides
         uses: actions/upload-artifact@v2
         with:
           name: slides-pdf
