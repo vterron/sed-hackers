@@ -6,11 +6,16 @@ SHELL := /bin/bash
 PDFLATEX=pdflatex
 PDFLATEX_OPTS=-interaction=nonstopmode -halt-on-error
 
-TEX_FILE=sed-hackers.tex
+BASENAME=sed-hackers
+TEX_FILE=${BASENAME}.tex
+PDF_FILE=${BASENAME}.pdf
 
 .PHONY: all pdf clean
 
-all : pdf
+all : pdf cover
+
+cover: pdf
+	pdf2svg sed-hackers.pdf pics/cover.svg
 
 pdf: $(TEX_FILE)
 	$(PDFLATEX) $(PDFLATEX_OPTS) $(TEX_FILE)

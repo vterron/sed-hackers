@@ -1,6 +1,6 @@
 The slides, in Spanish, of my talk to first-year Computer Science students.
 
-[![Front](./pics/title-page-screenshot.jpg)][pdf]
+[![Front](./pics/cover.svg)][pdf]
 
 They are also [available as a PDF][pdf], always up-to-date via [a GitHub action](.github/workflows/latex.yml).
 
