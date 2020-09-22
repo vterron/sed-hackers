@@ -10,4 +10,4 @@ They are also [available as a PDF][pdf], always up-to-date via [a GitHub action]
 
 More information is available on the [GitHub page of the talk](http://vterron.github.io/sed-hackers/).
 
-[pdf]: https://storage.googleapis.com/vterron-github/sed-hackers.pdf
+[pdf]: http://static.vterron.xyz/sed-hackers.pdf
