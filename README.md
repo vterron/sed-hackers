@@ -2,7 +2,7 @@ The slides, in Spanish, of my talk to first-year Computer Science students.
 
 ![Front](./pics/title-page-screenshot.jpg)
 
-They are also [available as a PDF](http://www.iaa.es/~vterron/sed-hackers.pdf), always up-to-date (via git hooks).
+They are also [available as a PDF](https://storage.googleapis.com/vterron-github/sed-hackers.pdf), always up-to-date (via git hooks).
 
 -   Title: *Be Hackers!*
 -   Language: Spanish
