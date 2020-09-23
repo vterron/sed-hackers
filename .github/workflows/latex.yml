@@ -6,12 +6,29 @@ env:
   GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
 
 jobs:
-  build_latex:
+  build_job:
+    name: Build PDF slides
     runs-on: ubuntu-latest
     steps:
       - name: Git repository checkout
         uses: actions/checkout@v2
 
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: sed-hackers.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: slides-pdf
+          path: sed-hackers.pdf
+
+  upload_job:
+    name: Upload PDF slides
+    needs: build_job
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup Cloud SDK
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
@@ -19,16 +36,10 @@ jobs:
           project_id: ${{ secrets.GCS_PROJECT }}
           export_default_credentials: true
 
-      - name: LaTeX compilation
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: sed-hackers.tex
-
-      - name: Archive PDF slides
-        uses: actions/upload-artifact@v2
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v2
         with:
           name: slides-pdf
-          path: sed-hackers.pdf
 
       - name: Upload PDF slides to Google Cloud Storage
         run: |-
