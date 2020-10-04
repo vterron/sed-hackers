@@ -1,4 +1,4 @@
-name: Compile Beamer slides to PDF
+name: Compile vterron.xyz/hackers Beamer slides to PDF
 
 on: [push]
 
