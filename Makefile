@@ -15,7 +15,7 @@ PDF_FILE=${BASENAME}.pdf
 all : pdf cover
 
 cover: pdf
-	pdf2svg sed-hackers.pdf pics/cover.svg
+	pdf2svg $(PDF_FILE) pics/cover.svg
 
 pdf: $(TEX_FILE)
 	$(PDFLATEX) $(PDFLATEX_OPTS) $(TEX_FILE)
