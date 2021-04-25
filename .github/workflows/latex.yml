@@ -2,9 +2,6 @@ name: Compile vterron.xyz/hackers Beamer slides to PDF
 
 on: [push]
 
-env:
-  GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
-
 jobs:
   build_job:
     name: Build PDF slides
